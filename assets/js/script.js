@@ -179,3 +179,38 @@ function calculateResult() {
 function updateResult() {
   document.getElementById("result").value = currentExpression || "0";
 }
+function findFactors() {
+    // Get the current number from calculator display
+    let num = parseFloat(currentExpression);
+    
+    // If no valid number, ask user to enter one
+    if (isNaN(num) || currentExpression === "" || currentExpression === "Error") {
+        num = prompt("Enter a number to find its factors:");
+        if (num === null) return;
+        num = parseFloat(num);
+    }
+    
+    // Check if it's a valid positive integer
+    if (isNaN(num) || num <= 0 || !Number.isInteger(num)) {
+        document.getElementById("result").value = "Error: Need whole number > 0";
+        currentExpression = "";
+        setTimeout(() => {
+            document.getElementById("result").value = "0";
+        }, 2000);
+        return;
+    }
+    
+    // Find all factors
+    let factors = [];
+    for (let i = 1; i <= num; i++) {
+        if (num % i === 0) {
+            factors.push(i);
+        }
+    }
+    
+    // DISPLAY IN CALCULATOR (not alert)
+    document.getElementById("result").value = `${num}: ${factors.join(", ")}`;
+    
+    // Also store in currentExpression so user can use it
+    currentExpression = factors.join(",");
+}
