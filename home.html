@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ann Marie Pinta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F9F7F4;
+      --ink: #1A1916;
+      --muted: #7A786F;
+      --accent: #C4A882;
+      --border: #E2DDD6;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .page {
+      max-width: 520px;
+      width: 100%;
+    }
+
+    .monogram {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 8vw, 3.6rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.4rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    .bio {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 2.5rem;
+    }
+
+    .tag {
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 99px;
+    }
+
+    .contact {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--border);
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="monogram">AMP</div>
+
+    <h1>Ann Marie<br /><em>Pinta</em></h1>
+    <p class="eyebrow">Personal page &nbsp;·&nbsp; 2026</p>
+
+    <hr />
+
+    <p class="bio">
+      A curious mind navigating the intersection of creativity and technology.
+      I believe in doing good work, staying genuine, and finding the beauty in the details.
+    </p>
+
+    <div class="tags">
+      <span class="tag">Design</span>
+      <span class="tag">Technology</span>
+      <span class="tag">Music</span>
+      <span class="tag">Travel</span>
+      <span class="tag">Stories</span>
+    </div>
+
+    <p class="contact">Say hello &rarr; <a href="mailto:hello@annmariepinta.com">hello@annmariepinta.com</a></p>
+
+    <footer>Ann Marie Pinta</footer>
+  </main>
+</body>
+</html>
